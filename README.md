@@ -7,14 +7,14 @@
 1. create a new repo
 2. `clone` repo in local server
 3. type `npm init` in command line and complete prompts or `npm init -y`
-4. create a js file called index.js
+4. create a js file called `index.js`
 5. write some code in file
 6. type `node index.js` in command line to run in node
 
 ## Part 2
 [Instructions](https://romebell.gitbook.io/sei-1019/node-express/00readme/02modules)
-1. create a js file called myModule.js
-2. create and define functions add, subtract, addAgain
+1. create a js file called `myModule.js`
+2. create and define functions add, subtract, addAgain in `myModule.js`
 ```javascript
 function add(num1, num2) {
     return num1 + num2
@@ -36,11 +36,11 @@ module.exports = {
     addAgain
 }
 ```
-4. import the module in index.js
+4. import the module in `index.js`
 ```js
 const {add, subtract, addAgain} = require('./myModule.js')
 ```
-5. call the functions in index.js
+5. call the functions in `index.js`
 ```js
 console.log(add(10, 1))
 console.log(subtract(5, 21))
