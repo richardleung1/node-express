@@ -48,14 +48,15 @@ console.log(addAgain(19, 13))
 ```
 6. Type `node index.js` in terminal to run in node
 
-# Creating and Importing Node Modules
+## Creating and Importing Node Modules
 1. Find a [node module](https://www.npmjs.com/browse/depended)
 2. Type `npm install <module>` in terminal to install module
 3. Refer to the documentation for proper usage
 4. Create a `.gitignore` file
 5. Add `node_modules` to `.gitignore` file so the `node_modules` folder doesn't upload to Github
 
-# Express
+## Express
+[Instructions](https://romebell.gitbook.io/sei-1019/node-express/00readme-1/01intro-to-express)
 1. Create a repo and `clone` in local server
 2. Type `npm i express` in terminal to install express
 3. Create a index.js
@@ -78,7 +79,8 @@ app.get('/', function(req, res) {
 7. Type `nodemon index.js` or `node index.js` in terminal to run
 8. Type `localhost:8000` in browser to visit your application
 
-# EJS: Embedded Javascript
+## EJS: Embedded Javascript
+[Instructions](https://romebell.gitbook.io/sei-1019/node-express/00readme-1/01intro-to-express/04templates)
 1. Type `npm install ejs` in terminal to add ejs to project
 2. Add `app.set('view engine', 'ejs');` to `index.js` before the routes and after creating application.
 3. Rename the .html files to .ejs files and place in a `views` folder
@@ -88,5 +90,5 @@ app.get('/(filename)', function(req, res) {
   res.render('(filename)', object);
 });
 ```
-5. The render function can take in an object and access the values stored in it as variables inside the ejs template
+5. The render function can take in an object as a parameter and access the values stored in it as variables inside the ejs template
 6. Use `<%= (embedded js goes here) %>` to embed any javascript in ejs files
