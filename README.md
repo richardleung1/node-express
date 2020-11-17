@@ -92,3 +92,17 @@ app.get('/(filename)', function(req, res) {
 ```
 5. The render function can take in an object as a parameter and access the values stored in it as variables inside the ejs template
 6. Use `<%= (embedded js goes here) %>` to embed any javascript in ejs files
+
+## Express Layouts and Controllers
+[Instructions](https://romebell.gitbook.io/sei-1019/node-express/00readme-1/01intro-to-express/01organization)
+1. Type `npm install express-ejs-layouts` in terminal to add ejs-layouts to project
+2. Add `const layouts = require('express-ejs-layouts');` to `index.js` before `app.set('view engine', 'ejs');` and after creating application.
+3. Add `app.use(layouts);` to `index.js` after `app.set('view engine', 'ejs');`
+4. In the views folder, create a layout called `layout.ejs`
+5. Fill in layout with html and add `<%- body %>` to the body element
+6. Set up other routes to view layout
+7. Create a `controllers` folder and create a `controller.js` file inside
+8. Add `const router = require('express').Router()` to `controller.js`
+9. Move the route from `index.js` and modify if necessary
+10. Add `module.exports = router` to the bottom of `controller.js`
+11. Add `app.use('/(common route)', require('./controllers/controller'));` to `index.js`
